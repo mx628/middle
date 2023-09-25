@@ -3,9 +3,11 @@
 
 int itc_second_max_num(long long number) {
     int max1 = -1, max2 = -1;
-    if(number < 10)
+    if(number < 10 && number > -10)
         return -1;
-        int n = 0;
+    int n = 0;
+    if(number < 0)
+        number *= -1;
     while (number > 0) {
         n = number % 10;
         if (n >= max1) {
