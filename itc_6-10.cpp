@@ -16,14 +16,12 @@ int itc_min_num(long long number){
 }
 
 int itc_rev_num(long long number){
-    long long rev = 0;
     if(number == 0)
-        return 0;
-    while (number > 0) {
-        rev = rev * 10 + number % 10;
+        return 1;
+    while (number % 10 == 0) {
         number /= 10;
     }
-    return itc_len_num(rev);
+    return itc_len_num(number);
 }
 
 int itc_null_count(long long number){
@@ -59,4 +57,5 @@ int itc_mirror_count(long long number) {
     }
     return n;
 }
+
 
