@@ -12,7 +12,7 @@ int itc_second_max_num(long long number) {
             max2 = max1;
             max1 = n;
         }
-        else if (n > max2 && n <= max1) {
+        else if (n > max2 && n < max1) {
             max2 = n;
         }
         number /= 10;
@@ -21,7 +21,7 @@ int itc_second_max_num(long long number) {
 }
 
 
-int itc_second_simple_max_num(long long number) {//ÍÀÄÎ ÏÅÐÅÄÅËÀÒÜ
+int itc_second_simple_max_num(long long number) {
     int max1 = -1, max2 = -1;
     if(number < 10)
         return -1;
